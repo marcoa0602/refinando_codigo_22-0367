@@ -7,14 +7,16 @@ En este ejercicio, se refinará un código dado y se publicará en un repositori
 
 
 def costs_list():
-    archivo = open('gift_costs.txt', 'r')
-    gift_costs = list(archivo)
+    """Función que devuelve una lista de costos del archivo gift_costs.txt"""
+    with open('gift_costs.txt', 'r', encoding='UTF-8') as archivo:
+        gift_costs = list(archivo)
     gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
     archivo.close()  # cerrar el archivo después de usarlo y no ser necesario
     return gift_costs
 
 
 def total(gift_costs):
+    """Función que suma los precios de la lista de costos para conseguir un total"""
     total_price = 0
     for cost in gift_costs:
         if cost > 1000:
@@ -26,9 +28,9 @@ def total(gift_costs):
 
 
 def main():
+    """Función principal que llama ambas funciones e imprime el total"""
     print(total(costs_list()))
-    # llama a los dos funciones y luego imprime el resultado
+
 
 if __name__ == '__main__':
     main()
-    
