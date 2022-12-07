@@ -10,8 +10,8 @@ def costs_list():
     """Función que devuelve una lista de costos del archivo gift_costs.txt"""
     with open('gift_costs.txt', 'r', encoding='UTF-8') as archivo:
         gift_costs = list(archivo)
-    gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
-    archivo.close()  # cerrar el archivo después de usarlo y no ser necesario
+        gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
+        archivo.close()  # cerrar el archivo después de usarlo y no ser necesario
     return gift_costs
 
 
