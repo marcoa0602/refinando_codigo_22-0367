@@ -5,13 +5,18 @@ Refinando código
 En este ejercicio, se refinará un código dado y se publicará en un repositorio de Github
 """
 
-
+import sys
 def costs_list():
     """Función que devuelve una lista de costos del archivo gift_costs.txt"""
     with open('gift_costs.txt', 'r', encoding='UTF-8') as archivo:
         gift_costs = list(archivo)
-        gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
-        archivo.close()  # cerrar el archivo después de usarlo y no ser necesario
+        try:
+            gift_costs = [int(c) for c in gift_costs]  # convierte strings a int
+            archivo.close()  # cerrar el archivo después de usarlo y no ser necesario
+        except ValueError:
+            print('Los datos deben ser dígitos.')
+            sys.exit()
+
     return gift_costs
 
 
