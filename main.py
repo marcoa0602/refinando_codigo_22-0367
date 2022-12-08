@@ -34,7 +34,7 @@ def total(gift_costs):
 
 def main():
     """Función principal que llama ambas funciones e imprime el total"""
-    print(total(costs_list()))
+    return print(total(costs_list()))
 
 
 if __name__ == '__main__':
