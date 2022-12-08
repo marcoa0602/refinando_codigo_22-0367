@@ -23,4 +23,4 @@ Todas estas pruebas fueron hecha con la herramienta pytest. Las primera prueba u
 
 # **Control de versiones**
 Link de GitHub: https://github.com/marcoa0602/refinando_codigo_22-0367.git
-![Alt text](Screenshot%202022-12-08%20112032.png)
+![Screenshot 2022-12-08 112032](https://user-images.githubusercontent.com/114118904/206487681-d3b6c5f6-f022-4d74-b56b-efd9714eb6cc.png)
